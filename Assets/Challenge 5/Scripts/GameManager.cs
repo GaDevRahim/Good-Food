@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,18 +32,11 @@ public class GameManager: MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Start is called before the first frame update
     internal void StartGame()
     {
         IsGameActive = true;
         StartCoroutine(Timer());
         StartCoroutine(CreateAfter());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator Timer()
@@ -112,5 +105,4 @@ public class GameManager: MonoBehaviour
         foreach (var item in list) 
             Destroy(item);
     }
-
 }

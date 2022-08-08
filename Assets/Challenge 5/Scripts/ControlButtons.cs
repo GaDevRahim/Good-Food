@@ -9,7 +9,6 @@ public class ControlButtons : MonoBehaviour
 
     Button button;
 
-    // Start is called before the first frame update
     void Start()
     {
         controlScreens = GameObject.Find("Screens").GetComponent<ControlScreens>();
@@ -19,11 +18,6 @@ public class ControlButtons : MonoBehaviour
         button.onClick.AddListener(GetButton);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void GetButton()
     {

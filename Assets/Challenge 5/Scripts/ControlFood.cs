@@ -8,18 +8,12 @@ public class ControlFood : MonoBehaviour
 
     [SerializeField] int points;
     [SerializeField] ParticleSystem explosion;
-    // Start is called before the first frame update
+
     void Start()
     {
         controlScreens = GameObject.Find("Screens").GetComponent<ControlScreens>();
         manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         StartCoroutine(Disapper());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnMouseDown()
@@ -42,5 +36,4 @@ public class ControlFood : MonoBehaviour
     {
         if (gameObject.CompareTag("Good")) manager.GameOver();
     }
-
 }

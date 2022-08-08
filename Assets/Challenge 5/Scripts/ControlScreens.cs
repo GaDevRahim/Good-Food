@@ -15,17 +15,10 @@ public class ControlScreens : MonoBehaviour
 
     GameManager manager;
 
-    // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         titleScreen.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     internal void OncePlay()
@@ -66,5 +59,4 @@ public class ControlScreens : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }
